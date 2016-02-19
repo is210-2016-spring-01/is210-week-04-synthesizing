@@ -24,7 +24,7 @@ def fahrenheit_to_celsius(degrees):
         >>> fahrenheit_to_celsius(100)
         Decimal('100')
     """   
-    return decimal.Decimal((degrees - 32) * 5) / 9
+    return decimal.Decimal(((degrees) - 32) * 5) / 9
 
 
 def celsius_to_kelvin(degrees):
