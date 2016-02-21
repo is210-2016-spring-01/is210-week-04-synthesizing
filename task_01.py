@@ -22,7 +22,7 @@ def fahrenheit_to_celsius(degrees):
         >>> fahrenheit_to_celsius(520)
         'Decimal('271')'
     """
-    celsius = ((degrees - 32)*5/9)
+    celsius = ((decimal.Decimal(degrees) - 32)*5/9)
     return decimal.Decimal(celsius)
 
 
@@ -69,4 +69,4 @@ def fahrenheit_to_kelvin(degrees):
     """
     celsius = ((degrees - 32)*5/9)
     kelvin = celsius + ABSOLUTE_DIFFERENCE
-    return decimal.Decimal(kelvin)
+    return kelvin
