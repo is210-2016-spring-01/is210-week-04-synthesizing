@@ -7,25 +7,25 @@ import decimal
 ABSOLUTE_DIFFERENCE = decimal.Decimal('273.15')
 
 
-def farenheit_to_celcius(degrees):
-    """Converts Farenheit to Celcius and returns a decimal.
+def farenheit_to_celsius(degrees):
+    """Converts Farenheit to Celsius and returns a decimal.
 
         Args:
-            degrees(int): Arg to be converted into Celcius.
+            degrees(int): Arg to be converted into Celsius.
 
         Returns:
-            decimal: Argument converted into Celcius.
+            decimal: Argument converted into Celsius.
 
         Examples:
 
-            >>> farenheit_to_celcius(212)
+            >>> farenheit_to_celsius(212)
             Decimal('100')
      """
     degrees = decimal.Decimal(((degrees) - 32) * 5)/9
     return degrees
 
 
-def celcius_to_kelvin(degrees):
+def celsius_to_kelvin(degrees):
     """Converts Celcius to Kelvin and returns a decimal.
 
         Args:
