@@ -7,7 +7,7 @@ import decimal
 ABSOLUTE_DIFFERENCE = decimal.Decimal('273.15')
 
 
-def farenheit_to_celsius(degrees):
+def fahrenheit_to_celsius(degrees):
     """Converts Farenheit to Celsius and returns a decimal.
 
         Args:
@@ -43,7 +43,7 @@ def celsius_to_kelvin(degrees):
     return degrees
 
 
-def farenheit_to_kelvin(degrees):
+def fahrenheit_to_kelvin(degrees):
     """Converts Farenheit to Kelvin and returns a decimal.
 
         Args:
@@ -57,6 +57,6 @@ def farenheit_to_kelvin(degrees):
             >>> farenheit_to_kelvin(212)
             Decimal('373.15')
      """
-    degrees = farenheit_to_celsius(degrees)
+    degrees = fahrenheit_to_celsius(degrees)
     degrees = celsius_to_kelvin(degrees)
     return degrees
