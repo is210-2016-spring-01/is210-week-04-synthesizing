@@ -16,8 +16,8 @@ def fahrenheit_to_celsius(degrees):
     to a *decimal* representation of degrees Celsius
 
     1. Deduct 32 from ``degrees``, then multiply by 5, then divide by 9"""
-    celsius = (((degrees -32) * 5)/9)
-    return decimal.Decimal(int((celsius)))
+    celsius = ((decimal.Decimal(degrees) -32) * 5)/9
+    return celsius
 
 
 def celsius_to_kelvin(degrees):
@@ -42,4 +42,4 @@ def fahrenheit_to_kelvin(degrees):
     Fahrenheit temperatures to Kelvin and return the result as a number."""
     f_to_c = fahrenheit_to_celsius(degrees)
     f_to_k = f_to_c + ABSOLUTE_DIFFERENCE
-    return f_to_k
+    return decimal.Decimal(f_to_k)
