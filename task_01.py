@@ -57,6 +57,6 @@ def farenheit_to_kelvin(degrees):
             >>> farenheit_to_kelvin(212)
             Decimal('373.15')
      """
-    degrees = farenheit_to_celcius(degrees)
-    degrees = celcius_to_kelvin(degrees)
+    degrees = farenheit_to_celsius(degrees)
+    degrees = celsius_to_kelvin(degrees)
     return degrees
