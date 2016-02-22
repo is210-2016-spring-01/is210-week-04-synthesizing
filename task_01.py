@@ -4,7 +4,7 @@
 
 
 import decimal
-ABSOLUTE_DIFFERENCE = decimal.Decimal(273.15)
+ABSOLUTE_DIFFERENCE = decimal.Decimal(('{:.2f}'.format(273.15)))
 
 
 def fahrenheit_to_celsius(degrees):
