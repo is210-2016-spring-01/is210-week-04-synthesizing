@@ -22,7 +22,7 @@ def fahrenheit_to_celsius(degrees):
             >>> farenheit_to_celsius(212)
             Decimal('100')
      """
-    degrees = decimal.Decimal(int(((degrees) - 32) * 5)/9)
+    degrees = (5*(decimal.Decimal(degrees) - 32))/9
     return degrees
 
 
