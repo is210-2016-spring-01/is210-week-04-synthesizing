@@ -5,8 +5,7 @@
 
 import decimal
 
-from decimal import *
-getcontext().prec = 5
+decimal.getcontext().prec = 5
 
 ABSOLUTE_DIFFERENCE = decimal.Decimal(273.15)
 
@@ -44,7 +43,7 @@ def celsius_to_kelvin(degrees):
         ('373.15')
     """
     total = ABSOLUTE_DIFFERENCE + decimal.Decimal(degrees)
-            
+
     return decimal.Decimal(total)
 
 print celsius_to_kelvin(100)
