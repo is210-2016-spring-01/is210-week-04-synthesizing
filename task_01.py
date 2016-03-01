@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 """A small docstring"""
 
+import decimal
 
-ABSOLUTE_DIFFERENCE = 273.15
+ABSOLUTE_DIFFERENCE = decimal.Decimal('273.15')
+
 
 def fahrenheit_to_celsius(degrees):
     """Does some math and returns a string.
@@ -17,12 +19,10 @@ def fahrenheit_to_celsius(degrees):
     Examples:
 
         >>> fahrenheit_to_celsius(212)
-        '100.000'
+        'Decimal('100')'
     """
-
-    '{:.3f}'.format(degrees)
-    celsius = (degrees - 32) * 5 / 9
-    return '{:.3f}'.format(celsius)
+    return decimal.Decimal('{}'.format((decimal.Decimal('{}'.format(degrees))
+                                        -32) * 5/9))
 
 
 def celsius_to_kelvin(degrees):
@@ -37,11 +37,9 @@ def celsius_to_kelvin(degrees):
     Examples:
 
         >>> celsius_to_kelvin(100)
-        '373.15'
+        'Decimal('373.15')'
     """
-    
-    kelvin = ABSOLUTE_DIFFERENCE + degrees
-    return kelvin
+    return decimal.Decimal('{}'.format(degrees+ABSOLUTE_DIFFERENCE))
 
 
 def fahrenheit_to_kelvin(degrees):
@@ -56,7 +54,6 @@ def fahrenheit_to_kelvin(degrees):
     Examples:
 
         >>> fahrenheit_to_kelvin(212)
-        '373.15'
+        'Decimal('373.15')'
     """
-    ftokelvin =((degrees - 32) * 5 / 9)  + ABSOLUTE_DIFFERENCE
-    return ftokelvin
+    return celsius_to_kelvin(fahrenheit_to_celsius(degrees))
